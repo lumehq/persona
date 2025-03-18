@@ -1,0 +1,32 @@
+{
+  "name": "nostr-sdk-react-native",
+  "version": "0.0.0",
+  "description": "Nostr SDK - React Native",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rust-nostr/nostr-sdk-react-native.git"
+  },
+  "main": "src/index",
+  "codegenConfig": {
+    "name": "RNNostrSdkReactNativeSpec",
+    "type": "modules",
+    "jsSrcsDir": "src"
+  },
+  "author": " <> ()",
+  "license": "UNLICENSED",
+  "homepage": "#readme",
+  "create-react-native-library": {
+    "type": "turbo-module",
+    "languages": "cpp",
+    "version": "0.48.3"
+  },
+  "dependencies": {
+    "uniffi-bindgen-react-native": "github:reyamir/uniffi-bindgen-react-native"
+  },
+  "scripts": {
+    "ubrn:ios": "ubrn build ios --config ubrn.config.yaml --and-generate",
+    "ubrn:android": "ubrn build android --config ubrn.config.yaml --and-generate",
+    "ubrn:checkout": "ubrn checkout --config ubrn.config.yaml",
+    "ubrn:clean": "rm -Rf cpp/ android/src/main/java ios/ src/Native* src/generated/ src/index.ts*"
+  }
+}
